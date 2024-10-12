@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Викторина</title>
+<!-- LOAD QUIZ CSS + JS -->
+<link href="style.css" rel="stylesheet">
+<script src="js.js"></script>
+</head>
+<body>
+<div class="mainContainer">
+<div class="containerCommands">
+    <h1>Введите названия команд</h1>
+    <div class="containerCommands_commands">
+      <form action="" id="join-us">
+        <div class="fields" id = "fields">
+        </div>
+      </form>
+    </div>
+    <div class="containerCommands_buttons">
+      <input class="submit" id="add_command" value="Добавить команду" type="button" />
+      <input class="submit" id="start_command"value="Начать" type="button" />
+    </div>
+</div>
+<div id="top_panel">
+    <h1><span id="game_title"></h1>
+    <div id="top_commands"></div>
+</div>
+<div class="quiz-over-modal">
+    <div class="content">
+        <h1>Итоги</h1>
+        <p><span id="info"></span></p>
+        <button id="btn-try-again">Попробывать снова</button>
+    </div>
+</div>
+
+<div class="question_panel_all">
+  <div class="question_panel">
+    <div class="question_panel_info">
+          <span id="question_info"></span>
+          <span id="question_score"></span>
+    </div>
+    <div class="quizWrap"></div>
+  </div>
+  <div class="question_panel_data">
+    <div class = "question_panel_data_information_div">
+      <img src="test.jpg" alt="image" id="image_info">
+      <div class="question_panel_data_button1">
+          <div class="question_panel_data_area" id = "question_panel_data_area">
+          </div>
+        <div class="question_panel_data_button_area">
+        <input class="submit" id="question_panel_data_information_button" value="Закрыть" type="button" />
+        </div>
+      </div>
+  
+    </div>
+  </div>
+</div>
+
+<div class="quizTableContainer">
+	<table id = "quizTable">
+		<tbody>
+		</tbody>
+	</table>
+</div>
+</div>
+
+<div id="bottom_commands">
+  <div class="game_menu_group">
+    <input type="file" id="load_file" style="display: none" />
+    <button id="load_game">Загрузить игру</button>
+    <button id="force_finish">Завершить игру</button>
+    <button id="new_game">Новая игра</button>
+  </div>
+  <div id="bottom_commands_info">
+    <h1>Школа 1538<br>Класс 3Э<br>2024-2025г.<br>Под руководством<br>Давыдовой С.В.</h1>
+  </div>
+</div>
+
+
+</body>
+</html>
