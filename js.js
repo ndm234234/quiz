@@ -453,11 +453,26 @@ processAnswer : () => {
   }*/
  },
 
+isEqual: (a, b)  => {
+  const difference = new Set();
+  a.forEach(element => {
+    if (!b.has(element)) {
+        difference.add(element);
+    }
+  });
+  b.forEach(element => {
+    if (!a.has(element)) {
+        difference.add(element);
+    }
+  });
+  return difference.size == 0;
+},
+
 isCorrectAnswers : () => {
   if (quiz.queryAnswers != null) {
     let answers = quiz.queryAnswers;
     let correctAnswers = quiz.selectedRandomQuery.answers;
-    return (correctAnswers.difference(answers).size == 0 && answers.difference(correctAnswers).size == 0);
+    return quiz.isEqual(correctAnswers, answers);
   }
   return false;
 },
