@@ -53,17 +53,18 @@
 }
 
 .question_panel_data_information_div {
-
   display: flex;
   flex-direction: row;
   max-height: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 #image_info {
-
   object-fit: contain;
   width:35%;
   height:auto;
+  margin: 10px;
 }
 
 #image_info.hide {
