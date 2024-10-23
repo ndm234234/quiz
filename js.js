@@ -666,6 +666,7 @@ showInformation: (value) => {
   if (value) {
     document.querySelector('.question_panel_data').classList.add("active");
     document.querySelector('.question_panel').classList.add("collapse");
+    document.getElementById('question_panel_data_area').scrollTop = 0;
   }
   else {
    document.querySelector('.question_panel_data').classList.remove("active");
