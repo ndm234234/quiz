@@ -852,16 +852,15 @@ window.addEventListener("load", () => {
     if (loadFileButton.value) {
 
       let file = loadFileButton.files[0];
-
       var r = new FileReader();
       r.onload = function(e) { 
-          var contents = e.target.result;
-          quiz.data = JSON.parse(contents);
 
+          quiz.showQuestionPanel(false);
+          quiz.data = JSON.parse(e.target.result);
           commandInputs = quiz.getCommandInputs();
           commands = commandInputs.map(t => { return t.value});
-     
           quiz.init(commands);
+          loadFileButton.value = null;
         }
       r.readAsText(file);
     } else {
