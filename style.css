@@ -42,8 +42,9 @@
   scroll-snap-align: center;
 }
 
-.question_panel_data_area {
+.question_panel_text_area {
   font-size: 22px;
+  font-family: arial, sans-serif;
   font-weight:500;
   display: flex;
   text-align: left;
@@ -65,19 +66,19 @@
 .question_panel_data_information_div {
   display: flex;
   flex-direction: row;
-  max-height: 500px;
+  max-height: 600px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-#image_info {
+.image_src {
   object-fit: contain;
   width:35%;
   height:auto;
   margin: 10px;
 }
 
-#image_info.hide {
+.image_src.hide {
   display: none;
 }
 

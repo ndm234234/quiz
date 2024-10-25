@@ -536,10 +536,10 @@ draw: (query) => {
     {
       document.getElementById('question_panel_data_area').innerHTML =  query.info != null ? query.info : "Внесите дополнительную информацию о вопросе.";
       if (query.info != null && query.info_img != null) {
-        document.getElementById('image_info').src =  query.info_img;
-        document.getElementById('image_info').classList.remove("hide");
+        document.getElementById('image_src').src =  query.info_img;
+        document.getElementById('image_src').classList.remove("hide");
       } else {
-        document.getElementById('image_info').classList.add("hide");
+        document.getElementById('image_src').classList.add("hide");
       }
       quiz.showInformation(true);
     }
@@ -671,6 +671,7 @@ showInformation: (value) => {
   else {
    document.querySelector('.question_panel_data').classList.remove("active");
    document.querySelector('.question_panel').classList.remove("collapse");
+   document.getElementById('image_src').src =  ""
   }
 },
 
